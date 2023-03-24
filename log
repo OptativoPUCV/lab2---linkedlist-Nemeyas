@@ -193,3 +193,13 @@ Fri 24 Mar 2023 11:54:32 AM UTC:
  tests:  3|4
 total_score: 25/70
 9f1a345
+Fri 24 Mar 2023 11:56:35 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:63:22: error: ‘Node’ has no member named ‘tail’
+   63 |   list->current->next->tail;
+      |                      ^~
+Compilation failed
+d27ddbc
