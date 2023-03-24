@@ -298,3 +298,16 @@ list.c:106:5: error: implicit declaration of function ‘pushfront’; did you m
 cc1: all warnings being treated as errors
 Compilation failed
 3afe343
+Fri 24 Mar 2023 11:41:49 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:106:5: error: too few arguments to function ‘pushFront’
+  106 |     pushFront(list);
+      |     ^~~~~~~~~
+list.c:84:6: note: declared here
+   84 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+Compilation failed
+9fd3878
