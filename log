@@ -114,3 +114,13 @@ list.c:106:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 93dce4f
+Fri 24 Mar 2023 04:23:20 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:107:1: error: expected ‘;’ before ‘}’ token
+  107 | }
+      | ^
+Compilation failed
+46746ec
