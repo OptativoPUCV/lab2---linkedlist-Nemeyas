@@ -239,3 +239,18 @@ Fri 24 Mar 2023 12:07:58 PM UTC:
  tests:  10|2
 total_score: 45/70
 7edcba9
+Fri 24 Mar 2023 12:14:28 PM UTC: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:111:3: error: ‘nuevoNodo’ undeclared (first use in this function)
+  111 |   nuevoNodo->data = data;
+      |   ^~~~~~~~~
+list.c:111:3: note: each undeclared identifier is reported only once for each function it appears in
+list.c:104:9: error: unused variable ‘newNode’ [-Werror=unused-variable]
+  104 |   Node* newNode = createNode(data);
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f5feb92
