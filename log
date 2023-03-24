@@ -286,3 +286,15 @@ list.c:137:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 62b80b4
+Fri 24 Mar 2023 11:41:07 PM UTC: 
+ list.c | 21 ++++++++++++++-------
+ 1 file changed, 14 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:106:5: error: implicit declaration of function ‘pushfront’; did you mean ‘pushFront’? [-Werror=implicit-function-declaration]
+  106 |     pushfront(list);
+      |     ^~~~~~~~~
+      |     pushFront
+cc1: all warnings being treated as errors
+Compilation failed
+3afe343
