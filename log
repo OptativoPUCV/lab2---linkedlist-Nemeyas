@@ -272,3 +272,17 @@ Fri 24 Mar 2023 12:30:54 PM UTC:
  tests:  10|2
 total_score: 45/70
 4f9b1c9
+Fri 24 Mar 2023 11:05:28 PM UTC: 
+ list.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:133:9: error: unused variable ‘data’ [-Werror=unused-variable]
+  133 |   void* data = nodoAEliminar->data;
+      |         ^~~~
+list.c:137:1: error: control reaches end of non-void function [-Werror=return-type]
+  137 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+62b80b4
