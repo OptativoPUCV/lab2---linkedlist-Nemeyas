@@ -136,3 +136,16 @@ Fri 24 Mar 2023 11:30:07 AM UTC:
  tests:  1|5
 total_score: 10/70
 2da8a1e
+Fri 24 Mar 2023 11:36:10 AM UTC: 
+ list.c | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:37:8: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   37 |   local->prev=NULL;
+      |        ^~
+list.c:38:8: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   38 |   local->next=NULL;
+      |        ^~
+Compilation failed
+b8795b9
