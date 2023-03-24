@@ -2,3 +2,54 @@ Fri 24 Mar 2023 03:24:57 AM UTC:
  tests:  0|6
 total_score: 0/70
 966e9bc
+Fri 24 Mar 2023 04:17:59 AM UTC: 
+ list.c | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:77:7: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   77 |   if (lista->current == NULL) {
+      |       ^~~~~
+      |       list
+list.c:77:7: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘popCurrent’:
+list.c:101:31: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+  101 |   void* dato = nodoAEliminar->dato;
+      |                               ^~~~
+      |                               data
+list.c:103:18: error: ‘nodoAE’ undeclared (first use in this function)
+  103 |     list->head = nodoAE
+      |                  ^~~~~~
+list.c:103:24: error: expected ‘;’ before ‘}’ token
+  103 |     list->head = nodoAE
+      |                        ^
+      |                        ;
+  104 | }
+      | ~                       
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+In file included from test.c:5:
+list.c:101:9: error: unused variable ‘dato’ [-Werror=unused-variable]
+  101 |   void* dato = nodoAEliminar->dato;
+      |         ^~~~
+list.c: In function ‘createList’:
+list.c:40:1: error: control reaches end of non-void function [-Werror=return-type]
+   40 | }
+      | ^
+list.c: In function ‘popCurrent’:
+test.c:469: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:107:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+  107 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a08c173

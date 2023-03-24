@@ -29,10 +29,18 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-     return NULL;
+  /*List* local= (List*) malloc (sizeof(List));
+  if (local == NULL){
+    return NULL;
+  }
+  firstList(&local);
+  nextList(&local);
+  
+  return local;*/
 }
 
 void * firstList(List * list) {
+  
     return NULL;
 }
 
@@ -49,6 +57,15 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
+  Node* newNode = createNode(data);
+  if (list->head == NULL) {
+    list->head = newNode;
+    } 
+  else {
+     newNode->next = list->head;
+    list->head = newNode;
+    }
+  list->current = newNode;
 }
 
 void pushBack(List * list, void * data) {
@@ -57,6 +74,13 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  if (lista->current == NULL) {
+    return;
+  }
+   Node* nuevoNodo = (Node*)malloc(sizeof(Node));
+  nuevoNodo->data = data;
+  nuevoNodo->next = list->current->next;
+  nuevoNodo->prev = list->current;
 }
 
 void * popFront(List * list) {
@@ -70,8 +94,15 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  if (list->current == NULL) {
     return NULL;
+    }
+  Node* nodoAEliminar = list->current;
+  void* dato = nodoAEliminar->dato;
+  if (nodoAEliminar == list->head){
+    list->head = nodoAE
 }
+
 
 void cleanList(List * list) {
     while (list->head != NULL) {
