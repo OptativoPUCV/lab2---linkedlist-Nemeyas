@@ -103,7 +103,7 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   Node* newNode = createNode(data);
   if (list->head == NULL) {
-    pushFront(list);
+    pushFront(list, list->head->data);
   }
   else{ 
     
