@@ -41,10 +41,10 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  list->current->next=list->head;
   if(list->head==NULL){
     return NULL;
   }
+  list->current->next=list->head;
     return list->head->data;
 }
 
