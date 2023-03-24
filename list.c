@@ -101,6 +101,7 @@ void * popCurrent(List * list) {
   void* data = nodoAEliminar->data;
   if (nodoAEliminar == list->head){
     list->head = nodoAEliminar;
+  }
 }
 
 
