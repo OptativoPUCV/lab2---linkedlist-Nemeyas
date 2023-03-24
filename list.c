@@ -37,6 +37,7 @@ List * createList() {
   nextList(&local);
   
   return local;*/
+  return NULL;
 }
 
 void * firstList(List * list) {
@@ -94,14 +95,14 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  if (list->current == NULL) {
+  /*if (list->current == NULL) {
     return NULL;
     }
   Node* nodoAEliminar = list->current;
   void* data = nodoAEliminar->data;
   if (nodoAEliminar == list->head){
     list->head = nodoAEliminar;
-  }
+  }*/
 }
 
 
