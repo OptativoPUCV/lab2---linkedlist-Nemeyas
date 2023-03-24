@@ -165,3 +165,14 @@ Fri 24 Mar 2023 11:41:49 AM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 50d015a
+Fri 24 Mar 2023 11:43:12 AM UTC: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:45:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   45 |   if(list->head=NULL){
+      |      ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5b7ae6c
