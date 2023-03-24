@@ -34,8 +34,8 @@ List * createList() {
     return NULL;
   }
   local->head=NULL;
-  local->prev=NULL;
-  local->next=NULL;
+  local->head->prev=NULL;
+  local->head->next=NULL;
   
   return local;
 }
