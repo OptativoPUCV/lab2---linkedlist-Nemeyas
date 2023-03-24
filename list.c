@@ -33,6 +33,7 @@ List * createList() {
   if (local == NULL){
     return NULL;
   }
+  
   firstList(&local);
   nextList(&local);
   
@@ -67,6 +68,7 @@ void pushFront(List * list, void * data) {
     list->head = newNode;
     }
   list->current = newNode;
+  list->tail = list->current;
 }
 
 void pushBack(List * list, void * data) {
