@@ -74,7 +74,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-  if (lista->current == NULL) {
+  if (list->current == NULL) {
     return;
   }
    Node* nuevoNodo = (Node*)malloc(sizeof(Node));
@@ -98,9 +98,9 @@ void * popCurrent(List * list) {
     return NULL;
     }
   Node* nodoAEliminar = list->current;
-  void* dato = nodoAEliminar->dato;
+  void* data = nodoAEliminar->data;
   if (nodoAEliminar == list->head){
-    list->head = nodoAE
+    list->head = nodoAEliminar;
 }
 
 
