@@ -136,7 +136,7 @@ void * popCurrent(List * list) {
     list->head = nodoAEliminar;
     list->head = nodoAEliminar->next;
     list->head->prev = NULL;
-    list->head->next = nodoAEliminar;
+    list->head->next = nodoAEliminar->prev;
   }
   if (nodoAEliminar == list->tail){
     list->tail = nodoAEliminar;
