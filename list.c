@@ -132,6 +132,11 @@ void * popCurrent(List * list) {
   }*/
   Node* nodoAEliminar = list->current;
   void* data = list->current->data;
+  if (nodoAEliminar == list->tail){
+    list->tail = nodoAEliminar->prev;
+    list->tail->next = NULL;
+    nodoAEliminar->prev= NULL;
+  }
   if (nodoAEliminar == list->head){
     list->head = list->current->next;
     nodoAEliminar->next=NULL;
@@ -140,11 +145,6 @@ void * popCurrent(List * list) {
   if(nodoAEliminar-> next != NULL && nodoAEliminar->prev != NULL){
     nodoAEliminar->next->prev=nodoAEliminar->prev;
     nodoAEliminar->prev->next=nodoAEliminar->next;
-  }
-  if (nodoAEliminar == list->tail){
-    list->tail = nodoAEliminar->prev;
-    list->tail->next = NULL;
-    nodoAEliminar->prev= NULL;
   }
 
   list->current = list->current->next;
