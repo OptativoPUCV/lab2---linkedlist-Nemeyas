@@ -133,7 +133,7 @@ void * popCurrent(List * list) {
   Node* nodoAEliminar = list->current;
   void* data = list->current->data;
   if (nodoAEliminar == list->head){
-    list->head = list->head->next;
+    list->head = list->current->next;
     //nodoAEliminar->next=NULL;
     list->head->prev = NULL;
   }
